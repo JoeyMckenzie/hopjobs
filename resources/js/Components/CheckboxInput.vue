@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import { computed } from 'vue';
 
 const emit = defineEmits(['update:checked']);
@@ -21,9 +21,9 @@ const proxyChecked = computed({
 
 <template>
     <input
-        type="checkbox"
-        :value="value"
         v-model="proxyChecked"
+        :value="value"
         class="rounded border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-500"
+        type="checkbox"
     />
 </template>
