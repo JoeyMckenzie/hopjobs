@@ -1,4 +1,7 @@
 {
     "singleQuote": true,
-    "plugins": ["tailwindcss"]
+    "tabWidth": 4,
+    "plugins": [
+        "tailwindcss"
+    ]
 }
