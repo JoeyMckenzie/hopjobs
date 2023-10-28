@@ -3,8 +3,10 @@ import { Icon } from '@iconify/vue';
 </script>
 
 <template>
-    <div class="flex flex-row items-center justify-center gap-x-2">
-        <Icon icon="mdi:hops" />
-        <span class="font-semibold text-xl">hopjobs</span>
-    </div>
+    <h1
+        class="flex flex-row gap-x-1 justify-center items-center font-semibold text-2xl"
+    >
+        <Icon class="h-8 w-8" icon="mdi:hops" />
+        hopjobs
+    </h1>
 </template>

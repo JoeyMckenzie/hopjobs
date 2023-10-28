@@ -2,11 +2,13 @@
 import { ref } from 'vue';
 import { Dialog, DialogPanel } from '@headlessui/vue';
 import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline';
+import ApplicationLogo from '@/Components/ApplicationLogo.vue';
+import { Link } from '@inertiajs/vue3';
 
 const navigation = [
-    { name: 'Jobs', href: '#' },
-    { name: 'Breweries', href: '#' },
-    { name: 'Twitter', href: '#' },
+    { name: 'Job listings', href: '#' },
+    { name: 'Post a job', href: '#' },
+    { name: 'Changelog', href: '#' },
 ];
 
 const mobileMenuOpen = ref(false);
@@ -19,14 +21,11 @@ const mobileMenuOpen = ref(false);
             class="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8"
         >
             <div class="flex lg:flex-1">
-                <a :href="route('home')" class="-m-1.5 p-1.5">
-                    <span class="sr-only">Hop Jobs</span>
-                    <img
-                        alt=""
-                        class="h-8 w-auto"
-                        src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                <Link :href="route('home')">
+                    <ApplicationLogo
+                        class="fill-current text-gray-500 hover:text-gray-600"
                     />
-                </a>
+                </Link>
             </div>
             <div class="hidden lg:flex lg:gap-x-12">
                 <a
@@ -72,7 +71,7 @@ const mobileMenuOpen = ref(false);
             >
                 <div class="flex items-center gap-x-6">
                     <a class="-m-1.5 p-1.5" href="#">
-                        <span class="sr-only">Your Company</span>
+                        <span class="sr-only">Hop Jobs</span>
                         <img
                             alt=""
                             class="h-8 w-auto"
