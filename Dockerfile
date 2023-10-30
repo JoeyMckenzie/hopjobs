@@ -80,7 +80,6 @@ RUN if [ -f "vite.resolvers.ts" ]; then \
 # assets that we generated above
 FROM base
 
-
 # Copy the node binary from the frontend build stage to run inertia in SSR mode
 COPY --from=node_modules_go_brrr /usr/local/bin/node /usr/local/bin/node
 COPY --from=node_modules_go_brrr /app/node_modules /var/www/html/node_modules
