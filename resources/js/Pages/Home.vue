@@ -2,19 +2,21 @@
 import { Head } from '@inertiajs/vue3';
 import NavbarMenu from '@/Components/NavbarMenu.vue';
 import LandingPageHero from '@/Components/LandingPageHero.vue';
+import RecentListing from '@/Components/RecentListing.vue';
 
-type Listing = {
+export type Listing = {
     id: number;
     title: string;
 };
+
+defineProps<{
+    listings: Listing[];
+}>();
 </script>
 
 <template>
     <Head title="Find you craft brewery job" />
-
     <NavbarMenu />
-
-    <div class="bg-white">
-        <LandingPageHero />
-    </div>
+    <LandingPageHero />
+    <RecentListing :listings="listings" />
 </template>

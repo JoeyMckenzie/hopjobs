@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\JobListing;
+use App\Models\JobType;
 use App\Models\PaymentFrequency;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Lottery;
@@ -34,6 +35,9 @@ class JobListingFactory extends Factory
             'description' => implode(fake()->sentences()),
             'pay' => $pay,
             'payment_frequency' => $frequency,
+            'primary_contact' => fake()->safeEmail(),
+            'application_link' => fake()->url(),
+            'job_type' => fake()->randomElement(JobType::values()),
         ];
     }
 }

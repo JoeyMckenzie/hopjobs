@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\JobType;
 use App\Models\PaymentFrequency;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
@@ -19,6 +20,9 @@ return new class extends Migration
             $table->string('description')->default('');
             $table->unsignedBigInteger('pay')->nullable();
             $table->enum('payment_frequency', PaymentFrequency::values())->nullable();
+            $table->string('application_link')->nullable();
+            $table->string('primary_contact')->nullable();
+            $table->enum('job_type', JobType::values());
         });
     }
 

@@ -12,7 +12,7 @@ class ListingsController extends Controller
     public function show(): Response
     {
         return Inertia::render('Home', [
-            'listings' => JobListing::select(['id', 'title', 'created_at', 'pay', 'payment_frequency'])->get(),
+            'listings' => JobListing::select(['id', 'title', 'created_at', 'pay', 'payment_frequency', 'job_type'])->get(),
         ]);
     }
 }
