@@ -1,6 +1,6 @@
 <?php
 
-use App\Models\UserType;
+use App\Models\PaymentFrequency;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -12,15 +12,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('job_listings', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->enum('type', UserType::values());
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->rememberToken();
             $table->timestamps();
+            $table->string('title')->default('');
+            $table->string('description')->default('');
+            $table->unsignedBigInteger('pay')->nullable();
+            $table->enum('payment_frequency', PaymentFrequency::values())->nullable();
         });
     }
 
@@ -29,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('job_listings');
     }
 };

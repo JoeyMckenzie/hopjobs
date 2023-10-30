@@ -2,6 +2,11 @@
 import { Head } from '@inertiajs/vue3';
 import NavbarMenu from '@/Components/NavbarMenu.vue';
 import LandingPageHero from '@/Components/LandingPageHero.vue';
+
+type Listing = {
+    id: number;
+    title: string;
+};
 </script>
 
 <template>

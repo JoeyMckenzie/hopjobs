@@ -7,13 +7,14 @@ namespace App\Http\Requests;
 use App\Models\User;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
+use Illuminate\Validation\Rules\Unique;
 
 class ProfileUpdateRequest extends FormRequest
 {
     /**
      * Get the validation rules that apply to the request.
      *
-     * @return array<string, array<\Illuminate\Contracts\Validation\Rule|string>>
+     * @return array<string, array<Unique|string>>
      */
     public function rules(): array
     {

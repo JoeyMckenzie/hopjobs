@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+use App\Http\Controllers\Jobs\ListingsController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -26,11 +27,9 @@ use Inertia\Inertia;
 //     ]);
 // });
 
-Route::get('/', fn () => Inertia::render('Home'))->name('home');
+Route::get('/', [ListingsController::class, 'show'])->name('home');
 
-Route::get('/dashboard', function () {
-    return Inertia::render('Dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/dashboard', fn () => Inertia::render('Dashboard'))->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
