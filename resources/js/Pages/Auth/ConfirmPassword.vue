@@ -43,7 +43,7 @@ const submit = () => {
                 <InputError :message="form.errors.password" class="mt-2" />
             </div>
 
-            <div class="flex justify-end mt-4">
+            <div class="mt-4 flex justify-end">
                 <PrimaryButton
                     :class="{ 'opacity-25': form.processing }"
                     :disabled="form.processing"

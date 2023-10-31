@@ -13,36 +13,36 @@ defineProps<{
     <Head title="Welcome" />
 
     <div
-        class="relative sm:flex sm:justify-center sm:items-center min-h-screen bg-dots-darker bg-center bg-gray-100 dark:bg-dots-lighter dark:bg-gray-900 selection:bg-red-500 selection:text-white"
+        class="bg-dots-darker dark:bg-dots-lighter relative min-h-screen bg-gray-100 bg-center selection:bg-red-500 selection:text-white dark:bg-gray-900 sm:flex sm:items-center sm:justify-center"
     >
         <div
             v-if="canLogin"
-            class="sm:fixed sm:top-0 sm:right-0 p-6 text-right"
+            class="p-6 text-right sm:fixed sm:right-0 sm:top-0"
         >
             <Link
                 v-if="$page.props.auth.user"
                 :href="route('dashboard')"
-                class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500"
+                class="font-semibold text-gray-600 hover:text-gray-900 focus:rounded-sm focus:outline focus:outline-2 focus:outline-red-500 dark:text-gray-400 dark:hover:text-white"
                 >Dashboard
             </Link>
 
             <template v-else>
                 <Link
                     :href="route('login')"
-                    class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500"
+                    class="font-semibold text-gray-600 hover:text-gray-900 focus:rounded-sm focus:outline focus:outline-2 focus:outline-red-500 dark:text-gray-400 dark:hover:text-white"
                     >Log in
                 </Link>
 
                 <Link
                     v-if="canRegister"
                     :href="route('register')"
-                    class="ml-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500"
+                    class="ml-4 font-semibold text-gray-600 hover:text-gray-900 focus:rounded-sm focus:outline focus:outline-2 focus:outline-red-500 dark:text-gray-400 dark:hover:text-white"
                     >Register
                 </Link>
             </template>
         </div>
 
-        <div class="max-w-7xl mx-auto p-6 lg:p-8">
+        <div class="mx-auto max-w-7xl p-6 lg:p-8">
             <div class="flex justify-center">
                 <svg
                     class="h-16 w-auto bg-gray-100 dark:bg-gray-900"
@@ -58,17 +58,17 @@ defineProps<{
             </div>
 
             <div class="mt-16">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+                <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:gap-8">
                     <a
-                        class="scale-100 p-6 bg-white dark:bg-gray-800/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent dark:ring-1 dark:ring-inset dark:ring-white/5 rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500"
+                        class="duration-250 flex scale-100 rounded-lg bg-white from-gray-700/50 via-transparent p-6 shadow-2xl shadow-gray-500/20 transition-all focus:outline focus:outline-2 focus:outline-red-500 motion-safe:hover:scale-[1.01] dark:bg-gray-800/50 dark:bg-gradient-to-bl dark:shadow-none dark:ring-1 dark:ring-inset dark:ring-white/5"
                         href="https://laravel.com/docs"
                     >
                         <div>
                             <div
-                                class="h-16 w-16 bg-red-50 dark:bg-red-800/20 flex items-center justify-center rounded-full"
+                                class="flex h-16 w-16 items-center justify-center rounded-full bg-red-50 dark:bg-red-800/20"
                             >
                                 <svg
-                                    class="w-7 h-7 stroke-red-500"
+                                    class="h-7 w-7 stroke-red-500"
                                     fill="none"
                                     stroke-width="1.5"
                                     viewBox="0 0 24 24"
@@ -89,7 +89,7 @@ defineProps<{
                             </h2>
 
                             <p
-                                class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed"
+                                class="mt-4 text-sm leading-relaxed text-gray-500 dark:text-gray-400"
                             >
                                 Laravel has wonderful documentation covering
                                 every aspect of the framework. Whether you are a
@@ -100,7 +100,7 @@ defineProps<{
                         </div>
 
                         <svg
-                            class="self-center shrink-0 stroke-red-500 w-6 h-6 mx-6"
+                            class="mx-6 h-6 w-6 shrink-0 self-center stroke-red-500"
                             fill="none"
                             stroke-width="1.5"
                             viewBox="0 0 24 24"
@@ -115,15 +115,15 @@ defineProps<{
                     </a>
 
                     <a
-                        class="scale-100 p-6 bg-white dark:bg-gray-800/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent dark:ring-1 dark:ring-inset dark:ring-white/5 rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500"
+                        class="duration-250 flex scale-100 rounded-lg bg-white from-gray-700/50 via-transparent p-6 shadow-2xl shadow-gray-500/20 transition-all focus:outline focus:outline-2 focus:outline-red-500 motion-safe:hover:scale-[1.01] dark:bg-gray-800/50 dark:bg-gradient-to-bl dark:shadow-none dark:ring-1 dark:ring-inset dark:ring-white/5"
                         href="https://laracasts.com"
                     >
                         <div>
                             <div
-                                class="h-16 w-16 bg-red-50 dark:bg-red-800/20 flex items-center justify-center rounded-full"
+                                class="flex h-16 w-16 items-center justify-center rounded-full bg-red-50 dark:bg-red-800/20"
                             >
                                 <svg
-                                    class="w-7 h-7 stroke-red-500"
+                                    class="h-7 w-7 stroke-red-500"
                                     fill="none"
                                     stroke-width="1.5"
                                     viewBox="0 0 24 24"
@@ -143,7 +143,7 @@ defineProps<{
                             </h2>
 
                             <p
-                                class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed"
+                                class="mt-4 text-sm leading-relaxed text-gray-500 dark:text-gray-400"
                             >
                                 Laracasts offers thousands of video tutorials on
                                 Laravel, PHP, and JavaScript development. Check
@@ -153,7 +153,7 @@ defineProps<{
                         </div>
 
                         <svg
-                            class="self-center shrink-0 stroke-red-500 w-6 h-6 mx-6"
+                            class="mx-6 h-6 w-6 shrink-0 self-center stroke-red-500"
                             fill="none"
                             stroke-width="1.5"
                             viewBox="0 0 24 24"
@@ -168,15 +168,15 @@ defineProps<{
                     </a>
 
                     <a
-                        class="scale-100 p-6 bg-white dark:bg-gray-800/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent dark:ring-1 dark:ring-inset dark:ring-white/5 rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500"
+                        class="duration-250 flex scale-100 rounded-lg bg-white from-gray-700/50 via-transparent p-6 shadow-2xl shadow-gray-500/20 transition-all focus:outline focus:outline-2 focus:outline-red-500 motion-safe:hover:scale-[1.01] dark:bg-gray-800/50 dark:bg-gradient-to-bl dark:shadow-none dark:ring-1 dark:ring-inset dark:ring-white/5"
                         href="https://laravel-news.com"
                     >
                         <div>
                             <div
-                                class="h-16 w-16 bg-red-50 dark:bg-red-800/20 flex items-center justify-center rounded-full"
+                                class="flex h-16 w-16 items-center justify-center rounded-full bg-red-50 dark:bg-red-800/20"
                             >
                                 <svg
-                                    class="w-7 h-7 stroke-red-500"
+                                    class="h-7 w-7 stroke-red-500"
                                     fill="none"
                                     stroke-width="1.5"
                                     viewBox="0 0 24 24"
@@ -197,7 +197,7 @@ defineProps<{
                             </h2>
 
                             <p
-                                class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed"
+                                class="mt-4 text-sm leading-relaxed text-gray-500 dark:text-gray-400"
                             >
                                 Laravel News is a community driven portal and
                                 newsletter aggregating all of the latest and
@@ -207,7 +207,7 @@ defineProps<{
                         </div>
 
                         <svg
-                            class="self-center shrink-0 stroke-red-500 w-6 h-6 mx-6"
+                            class="mx-6 h-6 w-6 shrink-0 self-center stroke-red-500"
                             fill="none"
                             stroke-width="1.5"
                             viewBox="0 0 24 24"
@@ -222,14 +222,14 @@ defineProps<{
                     </a>
 
                     <div
-                        class="scale-100 p-6 bg-white dark:bg-gray-800/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent dark:ring-1 dark:ring-inset dark:ring-white/5 rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500"
+                        class="duration-250 flex scale-100 rounded-lg bg-white from-gray-700/50 via-transparent p-6 shadow-2xl shadow-gray-500/20 transition-all focus:outline focus:outline-2 focus:outline-red-500 motion-safe:hover:scale-[1.01] dark:bg-gray-800/50 dark:bg-gradient-to-bl dark:shadow-none dark:ring-1 dark:ring-inset dark:ring-white/5"
                     >
                         <div>
                             <div
-                                class="h-16 w-16 bg-red-50 dark:bg-red-800/20 flex items-center justify-center rounded-full"
+                                class="flex h-16 w-16 items-center justify-center rounded-full bg-red-50 dark:bg-red-800/20"
                             >
                                 <svg
-                                    class="w-7 h-7 stroke-red-500"
+                                    class="h-7 w-7 stroke-red-500"
                                     fill="none"
                                     stroke-width="1.5"
                                     viewBox="0 0 24 24"
@@ -250,27 +250,27 @@ defineProps<{
                             </h2>
 
                             <p
-                                class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed"
+                                class="mt-4 text-sm leading-relaxed text-gray-500 dark:text-gray-400"
                             >
                                 Laravel's robust library of first-party tools
                                 and libraries, such as
                                 <a
-                                    class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500"
+                                    class="underline hover:text-gray-700 focus:rounded-sm focus:outline focus:outline-2 focus:outline-red-500 dark:hover:text-white"
                                     href="https://forge.laravel.com"
                                     >Forge</a
                                 >,
                                 <a
-                                    class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500"
+                                    class="underline hover:text-gray-700 focus:rounded-sm focus:outline focus:outline-2 focus:outline-red-500 dark:hover:text-white"
                                     href="https://vapor.laravel.com"
                                     >Vapor</a
                                 >,
                                 <a
-                                    class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500"
+                                    class="underline hover:text-gray-700 focus:rounded-sm focus:outline focus:outline-2 focus:outline-red-500 dark:hover:text-white"
                                     href="https://nova.laravel.com"
                                     >Nova</a
                                 >, and
                                 <a
-                                    class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500"
+                                    class="underline hover:text-gray-700 focus:rounded-sm focus:outline focus:outline-2 focus:outline-red-500 dark:hover:text-white"
                                     href="https://envoyer.io"
                                     >Envoyer</a
                                 >
@@ -278,32 +278,32 @@ defineProps<{
                                 Pair them with powerful open source libraries
                                 like
                                 <a
-                                    class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500"
+                                    class="underline hover:text-gray-700 focus:rounded-sm focus:outline focus:outline-2 focus:outline-red-500 dark:hover:text-white"
                                     href="https://laravel.com/docs/billing"
                                     >Cashier</a
                                 >,
                                 <a
-                                    class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500"
+                                    class="underline hover:text-gray-700 focus:rounded-sm focus:outline focus:outline-2 focus:outline-red-500 dark:hover:text-white"
                                     href="https://laravel.com/docs/dusk"
                                     >Dusk</a
                                 >,
                                 <a
-                                    class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500"
+                                    class="underline hover:text-gray-700 focus:rounded-sm focus:outline focus:outline-2 focus:outline-red-500 dark:hover:text-white"
                                     href="https://laravel.com/docs/broadcasting"
                                     >Echo</a
                                 >,
                                 <a
-                                    class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500"
+                                    class="underline hover:text-gray-700 focus:rounded-sm focus:outline focus:outline-2 focus:outline-red-500 dark:hover:text-white"
                                     href="https://laravel.com/docs/horizon"
                                     >Horizon</a
                                 >,
                                 <a
-                                    class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500"
+                                    class="underline hover:text-gray-700 focus:rounded-sm focus:outline focus:outline-2 focus:outline-red-500 dark:hover:text-white"
                                     href="https://laravel.com/docs/sanctum"
                                     >Sanctum</a
                                 >,
                                 <a
-                                    class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500"
+                                    class="underline hover:text-gray-700 focus:rounded-sm focus:outline focus:outline-2 focus:outline-red-500 dark:hover:text-white"
                                     href="https://laravel.com/docs/telescope"
                                     >Telescope</a
                                 >, and more.
@@ -314,18 +314,18 @@ defineProps<{
             </div>
 
             <div
-                class="flex justify-center mt-16 px-6 sm:items-center sm:justify-between"
+                class="mt-16 flex justify-center px-6 sm:items-center sm:justify-between"
             >
                 <div
                     class="text-center text-sm text-gray-500 dark:text-gray-400 sm:text-left"
                 >
                     <div class="flex items-center gap-4">
                         <a
-                            class="group inline-flex items-center hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500"
+                            class="group inline-flex items-center hover:text-gray-700 focus:rounded-sm focus:outline focus:outline-2 focus:outline-red-500 dark:hover:text-white"
                             href="https://github.com/sponsors/taylorotwell"
                         >
                             <svg
-                                class="-mt-px mr-1 w-5 h-5 stroke-gray-400 dark:stroke-gray-600 group-hover:stroke-gray-600 dark:group-hover:stroke-gray-400"
+                                class="-mt-px mr-1 h-5 w-5 stroke-gray-400 group-hover:stroke-gray-600 dark:stroke-gray-600 dark:group-hover:stroke-gray-400"
                                 fill="none"
                                 stroke-width="1.5"
                                 viewBox="0 0 24 24"
@@ -343,7 +343,7 @@ defineProps<{
                 </div>
 
                 <div
-                    class="ml-4 text-center text-sm text-gray-500 dark:text-gray-400 sm:text-right sm:ml-0"
+                    class="ml-4 text-center text-sm text-gray-500 dark:text-gray-400 sm:ml-0 sm:text-right"
                 >
                     Laravel v{{ laravelVersion }} (PHP v{{ phpVersion }})
                 </div>

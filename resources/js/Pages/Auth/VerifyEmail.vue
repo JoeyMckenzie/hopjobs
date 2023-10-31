@@ -31,7 +31,7 @@ const verificationLinkSent = computed(
 
         <div
             v-if="verificationLinkSent"
-            class="mb-4 font-medium text-sm text-green-600"
+            class="mb-4 text-sm font-medium text-green-600"
         >
             A new verification link has been sent to the email address you
             provided during registration.
@@ -49,7 +49,7 @@ const verificationLinkSent = computed(
                 <Link
                     :href="route('logout')"
                     as="button"
-                    class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                    class="rounded-md text-sm text-gray-600 underline hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                     method="post"
                     >Log Out
                 </Link>

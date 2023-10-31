@@ -3,6 +3,7 @@ import { Head } from '@inertiajs/vue3';
 import NavbarMenu from '@/Components/NavbarMenu.vue';
 import LandingPageHero from '@/Components/LandingPageHero.vue';
 import RecentListing from '@/Components/RecentListing.vue';
+import PageFooter from '@/Components/PageFooter.vue';
 
 export type Listing = {
     id: number;
@@ -19,4 +20,5 @@ defineProps<{
     <NavbarMenu />
     <LandingPageHero />
     <RecentListing :listings="listings" />
+    <PageFooter />
 </template>
