@@ -60,7 +60,8 @@
         "types": "./vendor/bin/pest --type-coverage --min=100",
         "test": "./vendor/bin/pest",
         "fmt": "./vendor/bin/pint",
-        "prepare": "git config core.hookspath .githooks"
+        "prepare": "git config core.hookspath .githooks",
+        "ci": "composer run test && composer run types && composer run lint"
     },
     "extra": {
         "laravel": {

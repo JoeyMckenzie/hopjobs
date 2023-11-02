@@ -6,8 +6,6 @@ import { createInertiaApp } from '@inertiajs/vue3';
 import { ZiggyVue } from '../../vendor/tightenco/ziggy/dist/vue.m';
 import { componentResolver, titleResolver } from './resolvers';
 
-const appName = import.meta.env.VITE_APP_NAME || 'Laravel';
-
 createInertiaApp({
     title: titleResolver,
     resolve: componentResolver,
