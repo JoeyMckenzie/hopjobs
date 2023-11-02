@@ -13,4 +13,5 @@ jobs:
       - name: Install packages
         run: composer install
 
-      - name
+      - name: Test and lint
+        run: composer run ci
