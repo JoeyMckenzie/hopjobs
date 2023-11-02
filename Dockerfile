@@ -55,7 +55,7 @@ COPY --from=base /var/www/html/vendor /app/vendor
 # lock file we might find. Defaults to
 # NPM if no lock file is found.
 # Note: We run "production" for Mix and "build" for Vite
-RUN if [ -f "vite.resolvers.ts" ]; then \
+RUN if [ -f "vite.config.ts" ]; then \
         ASSET_CMD="build"; \
     else \
         ASSET_CMD="production"; \
@@ -64,7 +64,7 @@ RUN if [ -f "vite.resolvers.ts" ]; then \
         yarn install --frozen-lockfile; \
         yarn $ASSET_CMD; \
     elif [ -f "pnpm-lock.yaml" ]; then \
-        corepack enable && corepack prepare pnpm@latest-7 --activate; \
+        corepack enable && corepack prepare pnpm@latest-8 --activate; \
         pnpm install --frozen-lockfile; \
         pnpm run $ASSET_CMD; \
     elif [ -f "package-lock.json" ]; then \
