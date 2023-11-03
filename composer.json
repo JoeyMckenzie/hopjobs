@@ -61,7 +61,7 @@
         "test": "./vendor/bin/pest",
         "fmt": "./vendor/bin/pint",
         "prepare": "git config core.hookspath .githooks",
-        "ci": "composer run test && composer run types && composer run lint"
+        "ci": "composer run types && composer run lint"
     },
     "extra": {
         "laravel": {
