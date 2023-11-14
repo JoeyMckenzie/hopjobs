@@ -6,7 +6,7 @@ import ApplicationLogo from '@/Components/ApplicationLogo.vue';
 import { Link } from '@inertiajs/vue3';
 
 const navigation = [
-    { name: 'Job listings', href: '#' },
+    { name: 'Jobs', href: '#' },
     { name: 'Post a job', href: '#' },
     { name: 'Changelog', href: '#' },
 ];
@@ -23,7 +23,7 @@ const mobileMenuOpen = ref(false);
             <div class="flex lg:flex-1">
                 <Link :href="route('home')">
                     <ApplicationLogo
-                        class="fill-current text-gray-500 hover:text-gray-600"
+                        class="fill-current text-green-700 transition duration-200 ease-out hover:text-green-800"
                     />
                 </Link>
             </div>
@@ -32,19 +32,19 @@ const mobileMenuOpen = ref(false);
                     v-for="item in navigation"
                     :key="item.name"
                     :href="item.href"
-                    class="text-sm font-semibold leading-6 text-gray-900 hover:underline"
+                    class="font-semibold leading-6 text-gray-900 hover:underline"
                     >{{ item.name }}</a
                 >
             </div>
             <div class="flex flex-1 items-center justify-end gap-x-6">
                 <a
                     :href="route('login')"
-                    class="hidden lg:block lg:text-sm lg:font-semibold lg:leading-6 lg:text-gray-900"
+                    class="hidden lg:block lg:lg:font-semibold lg:leading-6 lg:text-gray-900"
                     >Log in</a
                 >
                 <a
                     :href="route('register')"
-                    class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                    class="rounded-md bg-green-600 px-3 py-2 font-semibold text-white shadow-sm transition duration-200 ease-out hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600"
                     >Sign up</a
                 >
             </div>
@@ -75,11 +75,11 @@ const mobileMenuOpen = ref(false);
                         <img
                             alt=""
                             class="h-8 w-auto"
-                            src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                            src="https://tailwindui.com/img/logos/mark.svg?color=green&shade=600"
                         />
                     </a>
                     <a
-                        class="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                        class="ml-auto rounded-md bg-green-600 px-3 py-2 font-semibold text-white shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600"
                         href="#"
                         >Sign up</a
                     >

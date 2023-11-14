@@ -20,7 +20,7 @@ defineProps<{
             </div>
             <div class="mt-4 sm:ml-16 sm:mt-0 sm:flex-none">
                 <button
-                    class="block rounded-md bg-indigo-600 px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                    class="block rounded-md bg-green-600 px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600"
                     type="button"
                 >
                     Add user
@@ -89,7 +89,7 @@ defineProps<{
                                         class="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6"
                                     >
                                         <a
-                                            class="text-indigo-600 hover:text-indigo-900"
+                                            class="text-green-600 hover:text-green-900"
                                             href="#"
                                             >Edit<span class="sr-only"
                                                 >, {{ listing.title }}</span
