@@ -7,7 +7,7 @@
         "enabled": true,
         "indentStyle": "space",
         "indentWidth": 4,
-        "include": ["resources/js"],
+        "include": ["resources/js/**/*.tsx"],
         "ignore": ["resources/js/ssr.tsx"]
     },
     "linter": {
@@ -15,7 +15,7 @@
         "rules": {
             "recommended": true
         },
-        "include": ["resources/js"],
+        "include": ["resources/js/**/*.tsx"],
         "ignore": ["resources/js/ssr.tsx"]
     }
 }

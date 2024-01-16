@@ -15,11 +15,3 @@ pail:
 # runs the ssr server
 ssr:
     pnpm run build && php artisan inertia:start-ssr
-
-# continuously runs lint on file change
-lint-php:
-    fswatch -o app | xargs -I{} composer run lint
-
-# continuously runs lint on file change
-lint-react:
-    fswatch -o resources/js | xargs -I{} pnpm run lint

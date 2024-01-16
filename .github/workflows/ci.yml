@@ -1,6 +1,6 @@
 name: Run CI
 
-on: [ push ]
+on: [push]
 
 jobs:
   ci:
@@ -13,7 +13,7 @@ jobs:
         id: setup-php
         uses: shivammathur/setup-php@v2
         with:
-          php-version: '8.3'
+          php-version: "8.3"
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v2
@@ -24,7 +24,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18.x
-          cache: 'pnpm'
+          cache: "pnpm"
 
       - name: Install node dependencies
         run: pnpm install
@@ -46,7 +46,7 @@ jobs:
       mysql:
         image: mysql:latest
         env:
-          MYSQL_DATABASE: homebuildr
+          MYSQL_DATABASE: ci
           MYSQL_ROOT_PASSWORD: password
         ports:
           - 3306
@@ -59,13 +59,13 @@ jobs:
         run: |
           mysql --version
           sudo apt-get install -y mysql-client
-          mysql --host 127.0.0.1 --port ${{ job.services.mysql.ports['3306'] }} -uroot -ppassword -e "CREATE DATABASE hombuildr; SHOW DATABASES;"
+          mysql --host 127.0.0.1 --port ${{ job.services.mysql.ports['3306'] }} -uroot -ppassword -e "CREATE DATABASE ci; SHOW DATABASES;"
 
       - name: Setup PHP
         id: setup-php
         uses: shivammathur/setup-php@v2
         with:
-          php-version: '8.3'
+          php-version: "8.3"
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v2
@@ -82,7 +82,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18.x
-          cache: 'pnpm'
+          cache: "pnpm"
 
       - name: Install node dependencies
         run: pnpm install
@@ -98,7 +98,7 @@ jobs:
 
       - name: Run pest tests
         env:
-          DB_DATABASE: homebuildr
+          DB_DATABASE: ci
           DB_USERNAME: root
           DB_PASSWORD: password
           DB_PORT: ${{ job.services.mysql.ports[3306] }}
