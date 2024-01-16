@@ -3,7 +3,17 @@
     "type": "module",
     "scripts": {
         "dev": "vite",
-        "build": "tsc && vite build && vite build --ssr"
+        "build": "tsc && vite build && vite build --ssr",
+        "tailwind": "prettier --plugin prettier-plugin-tailwindcss --write ./resources/js",
+        "lint": "pnpm dlx @biomejs/biome lint ./resources/js",
+        "fix": "pnpm dlx @biomejs/biome lint --apply ./resources/js",
+        "fmt": "pnpm run tailwind && pnpm dlx @biomejs/biome format ./resources/js --write",
+        "check": "pnpm dlx @biomejs/biome check --apply ./resources/js",
+        "pre-commit": "pnpm run tailwind && pnpm run fmt"
+    },
+    "lint-staged": {
+        "**/*.{js,ts,tsx,json,yml,toml,md}": "pnpm run pre-commit",
+        "**/*.php": "composer run fmt"
     },
     "devDependencies": {
         "@headlessui/react": "^1.4.2",
