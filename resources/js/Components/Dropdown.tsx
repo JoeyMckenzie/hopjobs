@@ -39,12 +39,15 @@ const Trigger = ({ children }: PropsWithChildren) => {
 
     return (
         <>
-            <div onKeyUp={toggleOpen}>{children}</div>
+            <div onClick={toggleOpen} onKeyUp={toggleOpen}>
+                {children}
+            </div>
 
             {open && (
                 <div
                     className="fixed inset-0 z-40"
-                    onKeyUp={() => setOpen(false)}
+                    onClick={() => setOpen(false)}
+                    onKeyUp={toggleOpen}
                 />
             )}
         </>
@@ -91,6 +94,7 @@ const Content = ({
             >
                 <div
                     className={`absolute z-50 mt-2 rounded-md shadow-lg ${alignmentClasses} ${widthClasses}`}
+                    onClick={() => setOpen(false)}
                     onKeyUp={() => setOpen(false)}
                 >
                     <div

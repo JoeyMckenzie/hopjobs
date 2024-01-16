@@ -14,11 +14,12 @@ export default function Register() {
         password_confirmation: "",
     });
 
+    // biome-ignore lint/correctness/useExhaustiveDependencies: reset only needs to mount once
     useEffect(() => {
         return () => {
             reset("password", "password_confirmation");
         };
-    }, [reset]);
+    }, []);
 
     const submit: FormEventHandler = (e) => {
         e.preventDefault();
@@ -115,7 +116,11 @@ export default function Register() {
                         Already registered?
                     </Link>
 
-                    <PrimaryButton className="ms-4" disabled={processing}>
+                    <PrimaryButton
+                        type="submit"
+                        className="ms-4"
+                        disabled={processing}
+                    >
                         Register
                     </PrimaryButton>
                 </div>
