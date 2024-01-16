@@ -59,7 +59,7 @@ jobs:
         run: |
           mysql --version
           sudo apt-get install -y mysql-client
-          mysql --host 127.0.0.1 --port ${{ job.services.mysql.ports['3306'] }} -uroot -ppassword -e "DROP TABLE IF EXISTS ci; CREATE DATABASE ci; USE ci; SHOW DATABASES;"
+          mysql --host 127.0.0.1 --port ${{ job.services.mysql.ports['3306'] }} -uroot -ppassword -e "CREATE DATABASE IF NOT EXISTS ci; USE ci; SHOW DATABASES;"
 
       - name: Setup PHP
         id: setup-php
