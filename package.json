@@ -13,10 +13,9 @@
     "lint-staged": {
         "**/*.{js,ts,tsx,json,yml}": [
             "pnpm run check",
-            "pnpm run tailwind",
-            "git add"
+            "pnpm run tailwind"
         ],
-        "**/*.php": ["composer run fmt", "git add"]
+        "**/*.php": "composer run fmt"
     },
     "devDependencies": {
         "@biomejs/biome": "1.5.2",
