@@ -9,7 +9,7 @@ export default function Welcome({
     return (
         <>
             <Head title="Welcome" />
-            <div className="bg-dots-darker dark:bg-dots-lighter relative min-h-screen bg-gray-100 bg-center selection:bg-red-500 selection:text-white sm:flex sm:items-center sm:justify-center dark:bg-gray-900">
+            <div className="bg-dots-darker dark:bg-dots-lighter relative min-h-screen bg-gray-100 bg-center selection:bg-red-500 selection:text-white dark:bg-gray-900 sm:flex sm:items-center sm:justify-center">
                 <div className="p-6 text-end sm:fixed sm:right-0 sm:top-0">
                     {auth.user ? (
                         <Link
@@ -313,7 +313,7 @@ export default function Welcome({
                     </div>
 
                     <div className="mt-16 flex justify-center px-6 sm:items-center sm:justify-between">
-                        <div className="text-center text-sm text-gray-500 sm:text-start dark:text-gray-400">
+                        <div className="text-center text-sm text-gray-500 dark:text-gray-400 sm:text-start">
                             <div className="flex items-center gap-4">
                                 <a
                                     href="https://github.com/sponsors/taylorotwell"
@@ -338,7 +338,7 @@ export default function Welcome({
                             </div>
                         </div>
 
-                        <div className="ms-4 text-center text-sm text-gray-500 sm:ms-0 sm:text-end dark:text-gray-400">
+                        <div className="ms-4 text-center text-sm text-gray-500 dark:text-gray-400 sm:ms-0 sm:text-end">
                             Laravel v{laravelVersion} (PHP v{phpVersion})
                         </div>
                     </div>
