@@ -4,10 +4,11 @@ declare(strict_types=1);
 
 namespace Database\Factories;
 
+use App\Models\JobTag;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\JobTag>
+ * @extends Factory<JobTag>
  */
 final class JobTagFactory extends Factory
 {
@@ -19,7 +20,7 @@ final class JobTagFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'tag' => fake()->word(),
         ];
     }
 }
