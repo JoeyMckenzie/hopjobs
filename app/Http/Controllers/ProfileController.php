@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Redirect;
 use Inertia\Inertia;
 use Inertia\Response;
 
-class ProfileController extends Controller
+final class ProfileController extends Controller
 {
     /**
      * Display the user's profile form.
