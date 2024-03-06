@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreJobListingRequest;
 use App\Models\JobListing;
 use Cache;
 use Illuminate\Database\Eloquent\Collection;
@@ -13,6 +14,13 @@ use Inertia\Response;
 final class JobListingController extends Controller
 {
     private const string CACHE_KEY = 'job_listings';
+
+    public function store(StoreJobListingRequest $request): Response
+    {
+        $validated = $request->validated();
+
+        return Inertia::render('Dashboard');
+    }
 
     public function show(): Response
     {
