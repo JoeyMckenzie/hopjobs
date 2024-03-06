@@ -1,2 +1,3 @@
 resources/js/Components/ui/**/*.ts
 resources/js/Components/ui/**/*.vue
+resources/views/app.blade.php

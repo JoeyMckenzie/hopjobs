@@ -6,8 +6,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreJobListingRequest;
 use App\Models\JobListing;
-use Cache;
 use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Support\Facades\Cache;
 use Inertia\Inertia;
 use Inertia\Response;
 
@@ -17,12 +17,21 @@ final class JobListingController extends Controller
 
     public function store(StoreJobListingRequest $request): Response
     {
-        $validated = $request->validated();
+        return Inertia::render('Dashboard');
+    }
+
+    public function show(int $id): Response
+    {
+        $job = JobListing::openStatus()->find($id, ['title', 'description', 'url']);
+
+        if (is_null($job)) {
+            abort(404);
+        }
 
         return Inertia::render('Dashboard');
     }
 
-    public function show(): Response
+    public function index(): Response
     {
         if (Cache::has(self::CACHE_KEY)) {
             /** @var Collection<int, JobListing> $listings */

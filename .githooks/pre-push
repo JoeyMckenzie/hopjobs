@@ -1,4 +1,4 @@
 #!/bin/bash
 
 composer run lint
-npm run lint:check
+pnpm run lint:check
