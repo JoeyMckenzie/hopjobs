@@ -15,13 +15,19 @@ jobs:
         with:
           php-version: '8.3'
 
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: latest
+
       - name: Setup node
         uses: actions/setup-node@v3
         with:
           node-version: latest
+          cache: 'pnpm'
 
       - name: Install node dependencies
-        run: npm install
+        run: pnpm install
 
       - name: Install composer dependencies
         run: composer install
@@ -30,10 +36,10 @@ jobs:
         run: composer run ci
 
       - name: Lint TypeScript files
-        run: npm run check
+        run: pnpm run check
 
       - name: Build SSR bundle
-        run: npm run build
+        run: pnpm run build
 
   tests:
     runs-on: ubuntu-latest
@@ -75,11 +81,16 @@ jobs:
         with:
           node-version: latest
 
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: latest
+
       - name: Install node dependencies
-        run: npm install
+        run: pnpm install
 
       - name: Build assets
-        run: npm run build
+        run: pnpm run build
 
       - name: Generate key
         run: php artisan key:generate

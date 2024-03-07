@@ -7,8 +7,8 @@ import { Icon } from '@iconify/vue';
 <template>
     <UseDark v-slot="{ isDark, toggleDark }">
         <Button variant="ghost" @click="toggleDark()">
-            <Icon v-if="isDark" class="w-6 h-6" icon="solar:sun-fog-bold" />
-            <Icon v-else class="w-6 h-6" icon="radix-icons:moon" />
+            <Icon v-if="isDark" class="h-6 w-6" icon="solar:sun-fog-bold" />
+            <Icon v-else class="h-6 w-6" icon="radix-icons:moon" />
         </Button>
     </UseDark>
 </template>
