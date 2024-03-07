@@ -45,6 +45,7 @@
         "@headlessui/vue": "^1.7.19",
         "@heroicons/vue": "^2.1.1",
         "@radix-icons/vue": "^1.0.0",
+        "@vueuse/components": "^10.9.0",
         "@vueuse/core": "^10.9.0",
         "class-variance-authority": "^0.7.0",
         "clsx": "^2.1.0",

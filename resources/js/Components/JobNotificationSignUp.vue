@@ -29,7 +29,7 @@ import { Button } from '@/Components/ui/button';
         </CardHeader>
         <CardContent>
             <form>
-                <div class="grid items-center w-full gap-4">
+                <div class="grid w-full items-center gap-4">
                     <div class="flex flex-col space-y-1.5">
                         <Label for="name">Name</Label>
                         <Input id="name" placeholder="Name of your project" />
