@@ -5,12 +5,12 @@
         "dev": "vite",
         "build": "vue-tsc && vite build && vite build --ssr",
         "fmt": "prettier ./resources/js --plugin=prettier-plugin-tailwindcss",
-        "fmt:check": "pnpm run fmt --check",
-        "fmt:write": "pnpm run fmt --write",
+        "fmt:check": "npm run fmt --check",
+        "fmt:write": "npm run fmt --write",
         "lint:check": "eslint \"./resources/js/**/*.{ts,vue}\"",
-        "lint:fix": "pnpm run lint:check --fix",
-        "pre-commit": "pnpm run fmt:write",
-        "check": "pnpm run fmt:check && pnpm run lint:check"
+        "lint:fix": "npm run lint:check --fix",
+        "pre-commit": "npm run fmt:write",
+        "check": "npm run fmt:check && npm run lint:check"
     },
     "lint-staged": {
         "**/*.{js,ts,tsx,json,yml}": "npm run fmt:write",

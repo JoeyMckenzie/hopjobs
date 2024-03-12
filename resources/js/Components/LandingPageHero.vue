@@ -1,18 +1,20 @@
 <script lang="ts" setup>
 import { Button } from '@/Components/ui/button';
+import { Icon } from '@iconify/vue';
 </script>
 
 <template>
     <div class="px-6 py-24 sm:px-6 sm:py-32 lg:px-8">
         <div class="mx-auto max-w-2xl text-center">
-            <h2
-                class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
+            <div class="flex flex-row items-center justify-center space-x-1">
+                <span class="sr-only">Hopjobs</span>
+                <Icon class="h-16 w-16 text-green-600" icon="mdi:hops" />
+                <h1 class="text-4xl font-bold">hopjobs</h1>
+            </div>
+            <p
+                class="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-500 dark:text-gray-400"
             >
-                Boost your productivity.<br />Start using our app today.
-            </h2>
-            <p class="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-600">
-                Incididunt sint fugiat pariatur cupidatat consectetur sit cillum
-                anim id veniam aliqua proident excepteur commodo do ea.
+                Connecting people, beer, and jobs.
             </p>
             <div class="mt-10 flex items-center justify-center gap-x-6">
                 <Button :href="route('login')" as="a">Find a job</Button>
