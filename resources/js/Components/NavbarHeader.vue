@@ -31,7 +31,7 @@ const navigation = [
                     v-for="item in navigation"
                     :key="item.name"
                     :href="route('home')"
-                    class="font-semibold leading-6"
+                    class="font-semibold leading-6 hover:underline"
                     >{{ item.name }}</a
                 >
             </div>

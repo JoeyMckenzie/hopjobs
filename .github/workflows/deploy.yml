@@ -2,7 +2,7 @@ name: Deploy to Forge
 
 on:
   workflow_run:
-    workflows: ['Run CI']
+    workflows: [ 'Run CI' ]
     types:
       - completed
 
@@ -33,7 +33,7 @@ jobs:
       # To get the current commit propagated, pull the current production configuration,
       # and append the current commit to the file and push it back up to Forge.
       - name: Download current configuration
-        run: forge env:pull joeymckenzie.tech ${{ github.workspace }}/.env
+        run: forge env:pull hopjobs.xyz ${{ github.workspace }}/.env
 
       - name: Add current commit and push back to forge
         run: |
