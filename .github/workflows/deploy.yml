@@ -42,7 +42,7 @@ jobs:
         working-directory: ${{ github.workspace }}
 
       - name: Push environment to Forge
-        run: forge env:push joeymckenzie.tech ${{ github.workspace }}/.env
+        run: forge env:push hopjobs.xyz ${{ github.workspace }}/.env
 
       - name: Ping deploy URL
         run: curl -l ${{ secrets.FORGE_DEPLOY_URL }}
