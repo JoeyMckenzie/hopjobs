@@ -11,9 +11,7 @@ import { Icon } from '@iconify/vue';
                 <Icon class="h-16 w-16 text-green-600" icon="mdi:hops" />
                 <h1 class="text-4xl font-bold">hopjobs</h1>
             </div>
-            <p
-                class="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-500 dark:text-gray-400"
-            >
+            <p class="mx-auto mt-6 max-w-xl text-lg leading-8">
                 Connecting people, beer, and jobs.
             </p>
             <div class="mt-10 flex items-center justify-center gap-x-6">
