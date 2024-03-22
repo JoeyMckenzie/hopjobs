@@ -45,9 +45,14 @@ const mobileMenuOpen = ref(false);
                 <DarkModeToggle />
             </div>
             <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-                <a class="text-sm font-semibold leading-6" href="#"
-                    >Log in <span aria-hidden="true">&rarr;</span></a
+                <Button
+                    :href="route('login')"
+                    as="a"
+                    class="text-sm font-semibold leading-6 gap-x-1"
+                    variant="ghost"
                 >
+                    Log in <span aria-hidden="true"> &rarr;</span>
+                </Button>
             </div>
         </nav>
         <Dialog

@@ -21,7 +21,9 @@ return new class extends Migration
             $table->timestamps();
             $table->text('title');
             $table->text('description');
-            $table->text('url');
+            $table->text('listing_url');
+            $table->text('company');
+            $table->text('company_logo')->nullable();
             $table->integer('pay_start')->nullable();
             $table->integer('pay_end')->nullable();
             $table->enum('pay_type', PayType::toArray())->nullable();

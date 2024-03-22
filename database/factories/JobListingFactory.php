@@ -24,8 +24,10 @@ final class JobListingFactory extends Factory
     {
         return [
             'title' => fake()->jobTitle(),
-            'url' => fake()->url(),
+            'listing_url' => fake()->url(),
             'description' => fake()->paragraph(),
+            'company' => fake()->company(),
+            'company_logo' => fake()->imageUrl(),
             'pay_start' => fake()->numberBetween(10, 100),
             'pay_end' => fake()->numberBetween(1000, 10000),
             'status' => fake()->randomElement(ListingStatus::toArray()),

@@ -2,20 +2,12 @@
 
 declare(strict_types=1);
 
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\JobListingController;
 use App\Http\Controllers\ProfileController;
-use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
-use Inertia\Inertia;
 
-Route::get('/', function () {
-    return Inertia::render('Index', [
-        'canLogin' => Route::has('login'),
-        'canRegister' => Route::has('register'),
-        'laravelVersion' => Application::VERSION,
-        'phpVersion' => PHP_VERSION,
-    ]);
-})->name('home');
+Route::get('/', HomeController::class)->name('home');
 
 Route::get('/dashboard', [JobListingController::class, 'index'])
     ->middleware(['auth', 'verified'])

@@ -39,3 +39,7 @@ test:
 # keep ourselves honest, practice safe CI
 ci:
     npm run pre-commit && composer run ci
+
+# keep ourselves honest, practice safe CI
+migrate:
+    php artisan migrate:fresh --seed

@@ -1,10 +1,15 @@
 import { Config } from 'ziggy-js';
 
-export interface User {
+export type User = {
     id: number;
     name: string;
     email: string;
     email_verified_at: string;
+};
+
+export type JobListing = {
+    id: string;
+    url: string;
 }
 
 export type PageProps<

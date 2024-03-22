@@ -35,9 +35,18 @@ final class JobListing extends Model
 
     /**
      * @param  Builder<JobListing>  $query
+     * @return Builder<JobListing>
      */
-    public function scopeOpenStatus(Builder $query): void
+    public function scopeOpenStatus(Builder $query): Builder
     {
-        $query->where('status', '=', ListingStatus::OPEN->value);
+        return $query->where('status', '=', ListingStatus::OPEN->value);
+    }
+
+    /**
+     * @param  Builder<JobListing>  $query
+     */
+    public function scopePreviewOpenStatus(Builder $query): void
+    {
+        $this->openStatus()->limit(10);
     }
 }
