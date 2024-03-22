@@ -21,10 +21,7 @@ const navigation = {
     <footer
         class="mx-auto max-w-7xl overflow-hidden px-6 py-20 sm:py-24 lg:px-8"
     >
-        <nav
-            aria-label="Footer"
-            class="-mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12"
-        >
+        <nav aria-label="Footer" class="-mb-6 flex justify-center space-x-12">
             <div v-for="item in navigation.main" :key="item.name" class="pb-6">
                 <a
                     :href="route(item.route)"
@@ -45,7 +42,7 @@ const navigation = {
             </a>
         </div>
         <p class="mt-10 text-center text-xs leading-5">
-            &copy; 2020 Your Company, Inc. All rights reserved.
+            &copy; 2024 Hopjobs. Connecting people, beer, and jobs.
         </p>
     </footer>
 </template>

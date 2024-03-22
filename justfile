@@ -43,3 +43,14 @@ ci:
 # keep ourselves honest, practice safe CI
 migrate:
     php artisan migrate:fresh --seed
+
+# creates a default MySQL Docker container
+db-start:
+  docker run --name hopjobs_db -p 3306:3306 -v $(pwd)/docker:/docker-entrypoint-initdb.d --env-file .env -d mysql:latest
+
+## remove the current postgres container
+db-rm:
+  docker stop hopjobs_db && docker rm hopjobs_db
+
+## restart the container
+db-restart: db-rm db-start

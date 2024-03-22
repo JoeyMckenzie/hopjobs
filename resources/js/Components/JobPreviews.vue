@@ -8,7 +8,7 @@ defineProps<{
 </script>
 
 <template>
-    <div class="grid grid-cols-1 space-y-4">
+    <div class="grid grid-cols-1 space-y-4 px-4">
         <JobPreviewCard
             v-for="listing in listings"
             :key="listing.id"
