@@ -12,4 +12,6 @@ parameters:
         - '#Dynamic call to static method Illuminate\\Http\\Request::validate\(\).#'
         - '#Dynamic call to static method Illuminate\\Console\\Scheduling\\Event::hourly\(\).#'
         - '#Dynamic call to static method Illuminate\\Database\\Eloquent\\Builder<App\\Models\\[a-zA-Z]+>::orderBy\(\).#'
+        - '#Dynamic call to static method Illuminate\\Database\\Eloquent\\Builder<App\\Models\\[a-zA-Z]+>::limit\(\).#'
+        - '#Dynamic call to static method Illuminate\\Database\\Eloquent\\Builder<App\\Models\\[a-zA-Z]+>::openStatus\(\).#'
         - '#Instanceof between App\\Models\\User\|null and Illuminate\\Contracts\\Auth\\MustVerifyEmail will always evaluate to false.#'

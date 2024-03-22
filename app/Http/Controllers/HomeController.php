@@ -8,10 +8,11 @@ use App\Models\JobListing;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use Inertia\Response;
 
 final class HomeController
 {
-    public function __invoke()
+    public function __invoke(): Response
     {
         return Inertia::render('Index', [
             'canLogin' => Route::has('login'),
