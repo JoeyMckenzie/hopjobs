@@ -1184,16 +1184,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "dev-master",
+            "version": "v11.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "05238fccc72d3c1d4540b866fb16ee49223d7520"
+                "reference": "28eabe9dcdcb017a21ce226eda4538c5c8c93b1c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/05238fccc72d3c1d4540b866fb16ee49223d7520",
-                "reference": "05238fccc72d3c1d4540b866fb16ee49223d7520",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/28eabe9dcdcb017a21ce226eda4538c5c8c93b1c",
+                "reference": "28eabe9dcdcb017a21ce226eda4538c5c8c93b1c",
                 "shasum": ""
             },
             "require": {
@@ -1241,6 +1241,7 @@
                 "voku/portable-ascii": "^2.0"
             },
             "conflict": {
+                "mockery/mockery": "1.6.8",
                 "tightenco/collect": "<5.5.33"
             },
             "provide": {
@@ -1384,7 +1385,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2024-03-04T21:13:01+00:00"
+            "time": "2024-03-15T23:17:58+00:00"
         },
         {
             "name": "laravel/prompts",
@@ -1825,16 +1826,16 @@
         },
         {
             "name": "league/flysystem",
-            "version": "3.24.0",
+            "version": "3.25.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "b25a361508c407563b34fac6f64a8a17a8819675"
+                "reference": "abbd664eb4381102c559d358420989f835208f18"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/b25a361508c407563b34fac6f64a8a17a8819675",
-                "reference": "b25a361508c407563b34fac6f64a8a17a8819675",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/abbd664eb4381102c559d358420989f835208f18",
+                "reference": "abbd664eb4381102c559d358420989f835208f18",
                 "shasum": ""
             },
             "require": {
@@ -1862,7 +1863,7 @@
                 "friendsofphp/php-cs-fixer": "^3.5",
                 "google/cloud-storage": "^1.23",
                 "microsoft/azure-storage-blob": "^1.1",
-                "phpseclib/phpseclib": "^3.0.34",
+                "phpseclib/phpseclib": "^3.0.36",
                 "phpstan/phpstan": "^1.10",
                 "phpunit/phpunit": "^9.5.11|^10.0",
                 "sabre/dav": "^4.6.0"
@@ -1899,7 +1900,7 @@
             ],
             "support": {
                 "issues": "https://github.com/thephpleague/flysystem/issues",
-                "source": "https://github.com/thephpleague/flysystem/tree/3.24.0"
+                "source": "https://github.com/thephpleague/flysystem/tree/3.25.1"
             },
             "funding": [
                 {
@@ -1911,20 +1912,20 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-02-04T12:10:17+00:00"
+            "time": "2024-03-16T12:53:19+00:00"
         },
         {
             "name": "league/flysystem-local",
-            "version": "3.23.1",
+            "version": "3.25.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem-local.git",
-                "reference": "b884d2bf9b53bb4804a56d2df4902bb51e253f00"
+                "reference": "61a6a90d6e999e4ddd9ce5adb356de0939060b92"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem-local/zipball/b884d2bf9b53bb4804a56d2df4902bb51e253f00",
-                "reference": "b884d2bf9b53bb4804a56d2df4902bb51e253f00",
+                "url": "https://api.github.com/repos/thephpleague/flysystem-local/zipball/61a6a90d6e999e4ddd9ce5adb356de0939060b92",
+                "reference": "61a6a90d6e999e4ddd9ce5adb356de0939060b92",
                 "shasum": ""
             },
             "require": {
@@ -1958,8 +1959,7 @@
                 "local"
             ],
             "support": {
-                "issues": "https://github.com/thephpleague/flysystem-local/issues",
-                "source": "https://github.com/thephpleague/flysystem-local/tree/3.23.1"
+                "source": "https://github.com/thephpleague/flysystem-local/tree/3.25.1"
             },
             "funding": [
                 {
@@ -1971,7 +1971,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-01-26T18:25:23+00:00"
+            "time": "2024-03-15T19:58:44+00:00"
         },
         {
             "name": "league/mime-type-detection",
@@ -2132,16 +2132,16 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "3.0.2",
+            "version": "3.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "cf30cfceac9693bdb339ffb51f091e6039bdf10d"
+                "reference": "34ccf6f6b49c915421c7886c88c0cb77f3ebbfd2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/cf30cfceac9693bdb339ffb51f091e6039bdf10d",
-                "reference": "cf30cfceac9693bdb339ffb51f091e6039bdf10d",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/34ccf6f6b49c915421c7886c88c0cb77f3ebbfd2",
+                "reference": "34ccf6f6b49c915421c7886c88c0cb77f3ebbfd2",
                 "shasum": ""
             },
             "require": {
@@ -2234,7 +2234,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-02-06T09:28:31+00:00"
+            "time": "2024-03-13T12:42:37+00:00"
         },
         {
             "name": "nette/schema",
@@ -2444,32 +2444,32 @@
         },
         {
             "name": "nunomaduro/termwind",
-            "version": "v2.0.0",
+            "version": "v2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nunomaduro/termwind.git",
-                "reference": "e534f661e09b712e51971e2cf0f662f83116d5ad"
+                "reference": "58c4c58cf23df7f498daeb97092e34f5259feb6a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nunomaduro/termwind/zipball/e534f661e09b712e51971e2cf0f662f83116d5ad",
-                "reference": "e534f661e09b712e51971e2cf0f662f83116d5ad",
+                "url": "https://api.github.com/repos/nunomaduro/termwind/zipball/58c4c58cf23df7f498daeb97092e34f5259feb6a",
+                "reference": "58c4c58cf23df7f498daeb97092e34f5259feb6a",
                 "shasum": ""
             },
             "require": {
                 "ext-mbstring": "*",
                 "php": "^8.2",
-                "symfony/console": "^7.0.1"
+                "symfony/console": "^7.0.4"
             },
             "require-dev": {
-                "ergebnis/phpstan-rules": "^2.1.0",
+                "ergebnis/phpstan-rules": "^2.2.0",
                 "illuminate/console": "^11.0.0",
-                "laravel/pint": "^1.13.7",
-                "mockery/mockery": "^1.6.6",
-                "pestphp/pest": "^2.28.0",
-                "phpstan/phpstan": "^1.10.48",
+                "laravel/pint": "^1.14.0",
+                "mockery/mockery": "^1.6.7",
+                "pestphp/pest": "^2.34.1",
+                "phpstan/phpstan": "^1.10.59",
                 "phpstan/phpstan-strict-rules": "^1.5.2",
-                "symfony/var-dumper": "^7.0.0",
+                "symfony/var-dumper": "^7.0.4",
                 "thecodingmachine/phpstan-strict-rules": "^1.0.0"
             },
             "type": "library",
@@ -2512,7 +2512,7 @@
             ],
             "support": {
                 "issues": "https://github.com/nunomaduro/termwind/issues",
-                "source": "https://github.com/nunomaduro/termwind/tree/v2.0.0"
+                "source": "https://github.com/nunomaduro/termwind/tree/v2.0.1"
             },
             "funding": [
                 {
@@ -2528,7 +2528,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-12-08T16:23:40+00:00"
+            "time": "2024-03-06T16:17:14+00:00"
         },
         {
             "name": "phpoption/phpoption",
@@ -6571,16 +6571,16 @@
         },
         {
             "name": "laravel/sail",
-            "version": "v1.28.1",
+            "version": "v1.29.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/sail.git",
-                "reference": "f84e444a3dbc1811803cd2a050bdd54ff6f5eef8"
+                "reference": "e40cc7ffb5186c45698dbd47e9477e0e429396d0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/sail/zipball/f84e444a3dbc1811803cd2a050bdd54ff6f5eef8",
-                "reference": "f84e444a3dbc1811803cd2a050bdd54ff6f5eef8",
+                "url": "https://api.github.com/repos/laravel/sail/zipball/e40cc7ffb5186c45698dbd47e9477e0e429396d0",
+                "reference": "e40cc7ffb5186c45698dbd47e9477e0e429396d0",
                 "shasum": ""
             },
             "require": {
@@ -6629,7 +6629,7 @@
                 "issues": "https://github.com/laravel/sail/issues",
                 "source": "https://github.com/laravel/sail"
             },
-            "time": "2024-02-23T00:24:47+00:00"
+            "time": "2024-03-08T16:32:33+00:00"
         },
         {
             "name": "mockery/mockery",
