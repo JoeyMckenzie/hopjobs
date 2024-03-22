@@ -50,7 +50,7 @@
         "class-variance-authority": "^0.7.0",
         "clsx": "^2.1.0",
         "radix-vue": "^1.4.9",
-        "tailwind-merge": "^2.2.1",
+        "tailwind-merge": "^2.2.2",
         "tailwindcss-animate": "^1.0.7"
     }
 }
