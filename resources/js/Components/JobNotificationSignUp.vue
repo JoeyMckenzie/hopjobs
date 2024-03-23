@@ -1,5 +1,10 @@
+<script lang="ts" setup>
+import { Input } from '@/Components/ui/input';
+import { Button } from '@/Components/ui/button';
+</script>
+
 <template>
-    <div class="mx-auto max-w-6xl px-6 py-8 lg:px-8">
+    <div class="mx-auto max-w-5xl px-6 py-8 lg:px-8">
         <div
             class="rounded-3xl px-6 py-10 sm:px-12 sm:py-16 lg:flex lg:items-center lg:p-20"
         >
@@ -43,7 +48,3 @@
         </div>
     </div>
 </template>
-<script lang="ts" setup>
-import { Input } from '@/Components/ui/input';
-import { Button } from '@/Components/ui/button';
-</script>
