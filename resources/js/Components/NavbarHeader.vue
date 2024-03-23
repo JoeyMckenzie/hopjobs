@@ -5,6 +5,7 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline';
 import ApplicationLogo from '@/Components/ApplicationLogo.vue';
 import { Button } from '@/Components/ui/button';
 import DarkModeToggle from '@/Components/DarkModeToggle.vue';
+import { route } from 'ziggy-js';
 
 const navigation = [
     { name: 'Jobs', href: '#' },

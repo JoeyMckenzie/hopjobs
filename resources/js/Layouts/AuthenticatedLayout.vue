@@ -12,6 +12,7 @@ import {
     DropdownMenuSeparator,
     DropdownMenuTrigger,
 } from '@/Components/ui/dropdown-menu';
+import { route } from 'ziggy-js';
 
 const showingNavigationDropdown = ref(false);
 </script>

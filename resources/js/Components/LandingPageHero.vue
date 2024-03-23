@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import { Button } from '@/Components/ui/button';
 import { Icon } from '@iconify/vue';
+import { route } from 'ziggy-js';
 </script>
 
 <template>

@@ -4,6 +4,7 @@ import { Link, useForm, usePage } from '@inertiajs/vue3';
 import { Button } from '@/Components/ui/button';
 import { Label } from '@/Components/ui/label';
 import { Input } from '@/Components/ui/input';
+import { route } from 'ziggy-js';
 
 defineProps<{
     mustVerifyEmail?: Boolean;

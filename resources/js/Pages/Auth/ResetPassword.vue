@@ -4,7 +4,7 @@ import InputError from '@/Components/InputError.vue';
 import { Label } from '@/Components/ui/label';
 import { Input } from '@/Components/ui/input';
 import { Head, useForm } from '@inertiajs/vue3';
-import route from 'ziggy-js';
+import { route } from 'ziggy-js';
 import { Button } from '@/Components/ui/button';
 
 const props = defineProps<{
