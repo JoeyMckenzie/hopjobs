@@ -2,7 +2,7 @@ name: Trigger Forge deploy
 
 on:
   workflow_run:
-    workflows: [ 'Test' ]
+    workflows: [ 'CI' ]
     types:
       - completed
 
