@@ -18,7 +18,8 @@ import { route } from 'ziggy-js';
             <div class="mt-10 flex items-center justify-center gap-x-6">
                 <Button :href="route('login')" as="a">Find a job</Button>
                 <Button :href="route('register')" as="a" variant="ghost"
-                    >List a job <span aria-hidden="true">→</span></Button
+                    >List a job
+                    <span class="px-1" aria-hidden="true">→</span></Button
                 >
             </div>
         </div>

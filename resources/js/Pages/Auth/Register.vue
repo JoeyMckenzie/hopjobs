@@ -6,6 +6,8 @@ import { route } from 'ziggy-js';
 import { Button } from '@/Components/ui/button';
 import { Label } from '@/Components/ui/label';
 import { Input } from '@/Components/ui/input';
+import { Separator } from '@/Components/ui/separator';
+import { Icon } from '@iconify/vue';
 
 const form = useForm({
     name: '',
@@ -92,7 +94,7 @@ const submit = () => {
                 />
             </div>
 
-            <div class="mt-4 flex items-center justify-end">
+            <div class="mt-4 flex items-center justify-between">
                 <Link
                     :href="route('login')"
                     class="rounded-md text-sm text-gray-600 underline hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
@@ -108,6 +110,15 @@ const submit = () => {
                     Register
                 </Button>
             </div>
+
+            <div class="py-4">
+                <Separator />
+            </div>
+
+            <Button class="w-full" variant="outline">
+                Sign up with
+                <Icon icon="flat-color-icons:google" class="h-5 w-5 ml-2" />
+            </Button>
         </form>
     </GuestLayout>
 </template>

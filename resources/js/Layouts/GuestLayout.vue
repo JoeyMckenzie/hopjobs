@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import ApplicationLogo from '@/Components/ApplicationLogo.vue';
 import { Link } from '@inertiajs/vue3';
+import { route } from 'ziggy-js';
+import { Icon } from '@iconify/vue';
 </script>
 
 <template>
@@ -8,8 +9,17 @@ import { Link } from '@inertiajs/vue3';
         class="flex min-h-screen flex-col items-center bg-gray-100 pt-6 sm:justify-center sm:pt-0"
     >
         <div>
-            <Link href="/">
-                <ApplicationLogo class="h-20 w-20 fill-current text-gray-500" />
+            <Link :href="route('home')">
+                <div
+                    class="flex flex-row items-center justify-center space-x-1"
+                >
+                    <span class="sr-only">Hopjobs</span>
+                    <Icon class="h-12 w-12 text-green-600" icon="mdi:hops" />
+                    <h1 class="text-4xl font-bold">hopjobs</h1>
+                </div>
+                <p class="mx-auto max-w-xl text-sm leading-8">
+                    Connecting people, beer, and jobs.
+                </p>
             </Link>
         </div>
 
