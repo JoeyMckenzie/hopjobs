@@ -15,9 +15,17 @@ const props = defineProps<{
     listing: JobListing;
 }>();
 
-const formattedPayRange = computed(
-    () => `$${props.listing.pay_start} - $${props.listing.pay_end}`,
-);
+const formattedPayRange = computed(function () {
+    const formatter = new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD',
+        minimumFractionDigits: 0,
+        maximumFractionDigits: 0,
+    });
+    const payStart = formatter.format(props.listing.pay_start);
+    const payEnd = formatter.format(props.listing.pay_end);
+    return `${payStart} - ${payEnd}`;
+});
 </script>
 
 <template>
