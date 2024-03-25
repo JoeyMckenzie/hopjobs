@@ -21,7 +21,7 @@ final class HomeController
             'phpVersion' => PHP_VERSION,
             'listings' => JobListing::openStatus()
                 ->limit(5)
-                ->get(['title', 'listing_url', 'company', 'company_logo', 'description']),
+                ->get(['title', 'listing_url', 'company', 'company_logo', 'description', 'listing_type']),
         ]);
     }
 }
