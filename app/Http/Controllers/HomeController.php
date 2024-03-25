@@ -14,14 +14,25 @@ final class HomeController
 {
     public function __invoke(): Response
     {
+        $listings = JobListing::openStatus()
+            ->limit(5)
+            ->get([
+                'title',
+                'listing_url',
+                'company',
+                'company_logo',
+                'description',
+                'listing_type',
+                'pay_start',
+                'pay_end',
+            ]);
+
         return Inertia::render('Index', [
             'canLogin' => Route::has('login'),
             'canRegister' => Route::has('register'),
             'laravelVersion' => Application::VERSION,
             'phpVersion' => PHP_VERSION,
-            'listings' => JobListing::openStatus()
-                ->limit(5)
-                ->get(['title', 'listing_url', 'company', 'company_logo', 'description', 'listing_type']),
+            'listings' => $listings,
         ]);
     }
 }
