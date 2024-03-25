@@ -19,7 +19,9 @@ final class HomeController
             'canRegister' => Route::has('register'),
             'laravelVersion' => Application::VERSION,
             'phpVersion' => PHP_VERSION,
-            'listings' => JobListing::openStatus()->get(),
+            'listings' => JobListing::openStatus()
+                ->limit(5)
+                ->get(['title', 'listing_url', 'company', 'company_logo', 'description']),
         ]);
     }
 }

@@ -39,7 +39,9 @@ final class JobListing extends Model
      */
     public function scopeOpenStatus(Builder $query): Builder
     {
-        return $query->where('status', '=', ListingStatus::OPEN->value);
+        return $query
+            ->where('status', '=', ListingStatus::OPEN->value)
+            ->orderByDesc('created_at');
     }
 
     /**
