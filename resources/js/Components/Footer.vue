@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import { Icon } from '@iconify/vue';
 import { route } from 'ziggy-js';
+import DarkModeToggle from '@/Components/DarkModeToggle.vue';
 
 const navigation = {
     main: [
@@ -41,6 +42,7 @@ const navigation = {
                 <span class="sr-only">{{ item.name }}</span>
                 <Icon :icon="item.icon" aria-hidden="true" class="h-6 w-6" />
             </a>
+            <DarkModeToggle />
         </div>
         <p class="mt-10 text-center text-xs leading-5">
             &copy; 2024 Hopjobs. Connecting people, beer, and jobs.

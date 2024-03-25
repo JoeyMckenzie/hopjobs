@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { inject } from 'vue';
+import { Ref } from 'vue';
 import {
     Dialog,
     DialogPanel,
@@ -8,15 +8,22 @@ import {
     TransitionRoot,
 } from '@headlessui/vue';
 import { XMarkIcon } from '@heroicons/vue/24/outline';
-import { mobileMenuInjectionKey } from '@/Utilities/keys';
 import { Button } from '@/Components/ui/button';
 
-const { mobileMenuOpen, toggleMenu } = inject(mobileMenuInjectionKey)!;
+defineProps<{
+    mobileMenuOpen: Ref<boolean>;
+}>();
+
+defineEmits(['mobile-menu-closed']);
 </script>
 
 <template>
     <TransitionRoot :show="mobileMenuOpen" as="template">
-        <Dialog as="div" class="relative z-10" @close="toggleMenu">
+        <Dialog
+            as="div"
+            class="relative z-10"
+            @close="$emit('mobile-menu-closed')"
+        >
             <TransitionChild
                 as="template"
                 enter="ease-in-out duration-500"
@@ -65,7 +72,11 @@ const { mobileMenuOpen, toggleMenu } = inject(mobileMenuInjectionKey)!;
                                             >
                                                 <Button
                                                     type="button"
-                                                    @click="toggleMenu"
+                                                    @click="
+                                                        $emit(
+                                                            'mobile-menu-closed',
+                                                        )
+                                                    "
                                                 >
                                                     <span
                                                         class="absolute -inset-2.5"

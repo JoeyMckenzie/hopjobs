@@ -8,8 +8,17 @@ export type User = {
 };
 
 export type JobListing = {
-    id: string;
-    url: string;
+    id: number;
+    title: string;
+    description: string;
+    listing_url: string;
+    company: string;
+    company_logo: string
+    pay_start: number;
+    pay_end: number;
+    pay_type: string;
+    status: string;
+    listing_type: string;
 }
 
 export type PageProps<

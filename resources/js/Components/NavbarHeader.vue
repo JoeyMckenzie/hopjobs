@@ -1,11 +1,9 @@
 <script lang="ts" setup>
-import { provide, ref } from 'vue';
+import { ref } from 'vue';
 import { Bars3Icon } from '@heroicons/vue/24/outline';
 import ApplicationLogo from '@/Components/ApplicationLogo.vue';
 import { Button } from '@/Components/ui/button';
-import DarkModeToggle from '@/Components/DarkModeToggle.vue';
 import { route } from 'ziggy-js';
-import { mobileMenuInjectionKey } from '@/Utilities/keys';
 import MobileMenuSlideOver from '@/Components/MobileMenuSlideOver.vue';
 
 const navigation = [
@@ -15,13 +13,6 @@ const navigation = [
 ];
 
 const mobileMenuOpen = ref(false);
-
-const toggleMenu = () => (mobileMenuOpen.value = !mobileMenuOpen.value);
-
-provide(mobileMenuInjectionKey, {
-    mobileMenuOpen,
-    toggleMenu,
-});
 </script>
 
 <template>
@@ -51,7 +42,6 @@ provide(mobileMenuInjectionKey, {
                     class="text-sm font-semibold hover:underline leading-6"
                     >{{ item.name }}</a
                 >
-                <DarkModeToggle />
             </div>
             <div class="hidden lg:flex lg:flex-1 lg:justify-end">
                 <Button
@@ -64,6 +54,9 @@ provide(mobileMenuInjectionKey, {
                 </Button>
             </div>
         </nav>
-        <MobileMenuSlideOver />
+        <MobileMenuSlideOver
+            :mobile-menu-open="mobileMenuOpen"
+            @mobile-menu-closed="mobileMenuOpen = false"
+        />
     </header>
 </template>

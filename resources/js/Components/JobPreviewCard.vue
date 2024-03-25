@@ -17,8 +17,8 @@ defineProps<{
 <template>
     <Card class="w-full mx-auto max-w-screen-md">
         <CardHeader>
-            <CardTitle>Card Title</CardTitle>
-            <CardDescription>Card Description</CardDescription>
+            <CardTitle>{{ listing.title }}</CardTitle>
+            <CardDescription>{{ listing.title }}</CardDescription>
         </CardHeader>
         <CardContent> Card Content</CardContent>
         <CardFooter> Card Footer</CardFooter>
