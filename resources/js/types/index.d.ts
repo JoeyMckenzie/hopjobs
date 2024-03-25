@@ -13,13 +13,13 @@ export type JobListing = {
     description: string;
     listing_url: string;
     company: string;
-    company_logo: string
-    pay_start: number;
-    pay_end: number;
-    pay_type: string;
+    company_logo?: string;
+    pay_start?: number;
+    pay_end?: number;
+    pay_type?: string;
     status: string;
     listing_type: string;
-}
+};
 
 export type PageProps<
     T extends Record<string, unknown> = Record<string, unknown>,

@@ -25,6 +25,7 @@ final class HomeController
                 'listing_type',
                 'pay_start',
                 'pay_end',
+                'pay_type'
             ]);
 
         return Inertia::render('Index', [

@@ -6,11 +6,10 @@ namespace App\Enums;
 
 enum ListingType: string
 {
-    case ON_SITE = 'on_site';
+    case FULL_TIME = 'full_time';
 
-    case HYBRID = 'hybrid';
+    case PART_TIME = 'part_time';
 
-    case REMOTE = 'remote';
 
     /**
      * @return string[]

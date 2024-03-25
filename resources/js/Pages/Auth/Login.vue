@@ -7,6 +7,8 @@ import { Checkbox } from '@/Components/ui/checkbox';
 import { Button } from '@/Components/ui/button';
 import { Label } from '@/Components/ui/label';
 import { Input } from '@/Components/ui/input';
+import { Separator } from '@/Components/ui/separator';
+import { Icon } from '@iconify/vue';
 
 defineProps<{
     canResetPassword?: boolean;
@@ -75,7 +77,7 @@ const submit = () => {
                 </label>
             </div>
 
-            <div class="mt-4 flex items-center justify-end">
+            <div class="mt-4 flex items-center justify-between">
                 <Link
                     v-if="canResetPassword"
                     :href="route('password.request')"
@@ -84,14 +86,19 @@ const submit = () => {
                     Forgot your password?
                 </Link>
 
-                <Button
-                    :class="{ 'opacity-25': form.processing }"
-                    :disabled="form.processing"
-                    class="ms-4"
-                >
+                <Button :disabled="form.processing" class="ms-4">
                     Log in
                 </Button>
             </div>
+
+            <div class="py-4">
+                <Separator />
+            </div>
+
+            <Button class="w-full" variant="outline">
+                Sign in with
+                <Icon icon="flat-color-icons:google" class="h-5 w-5 ml-2" />
+            </Button>
         </form>
     </GuestLayout>
 </template>
