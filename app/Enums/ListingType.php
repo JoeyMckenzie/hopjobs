@@ -10,7 +10,6 @@ enum ListingType: string
 
     case PART_TIME = 'part_time';
 
-
     /**
      * @return string[]
      */
