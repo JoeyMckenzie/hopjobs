@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import { Ref } from 'vue';
 import {
     Dialog,
     DialogPanel,
@@ -11,7 +10,7 @@ import { XMarkIcon } from '@heroicons/vue/24/outline';
 import { Button } from '@/Components/ui/button';
 
 defineProps<{
-    mobileMenuOpen: Ref<boolean>;
+    mobileMenuOpen: boolean;
 }>();
 
 defineEmits(['mobile-menu-closed']);
