@@ -11,9 +11,6 @@ final class JobNotificationSubscriber extends Model
 {
     use HasFactory;
 
-    /**
-     * @var string[]
-     */
     protected $fillable = [
         'email',
     ];
