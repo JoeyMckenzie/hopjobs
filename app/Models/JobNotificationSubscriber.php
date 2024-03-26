@@ -10,4 +10,11 @@ use Illuminate\Database\Eloquent\Model;
 final class JobNotificationSubscriber extends Model
 {
     use HasFactory;
+
+    /**
+     * @var string[]
+     */
+    protected $fillable = [
+        'email',
+    ];
 }

@@ -66,55 +66,71 @@ const formattedPayRange = computed(() => {
     return `${payStart} - ${payEnd}`;
 });
 
-const hasCompanyLogo = computed(() => !!props.listing.company_logo);
-
 const isHovered = ref(false);
+const hasCompanyLogo = computed(() => !!props.listing.company_logo);
+const hasCompanyWebsiteUrl = computed(
+    () => !!props.listing.company_website_url,
+);
 </script>
 
 <template>
-    <a
-        :href="listing.listing_url"
+    <Card
         class="w-full mx-auto max-w-screen-md transition ease-in-out delay-75 hover:scale-[101%]"
     >
-        <Card>
-            <CardHeader class="flex-row justify-between">
-                <div class="flex flex-row space-x-2">
-                    <Avatar>
-                        <AvatarImage
-                            v-if="hasCompanyLogo"
-                            :alt="listing.company"
-                            :src="listing.company_logo!"
-                        />
-                        <AvatarFallback>Logo</AvatarFallback>
-                    </Avatar>
-                    <div class="my-auto">
+        <CardHeader class="flex-row justify-between">
+            <div class="flex flex-row space-x-2">
+                <Avatar>
+                    <AvatarImage
+                        v-if="hasCompanyLogo"
+                        :alt="listing.company"
+                        :src="listing.company_logo!"
+                    />
+                    <AvatarFallback>Logo</AvatarFallback>
+                </Avatar>
+                <div class="my-auto">
+                    <a
+                        :href="listing.listing_url"
+                        class="hover:underline"
+                        rel="noreferrer"
+                    >
                         <CardTitle>{{ listing.title }}</CardTitle>
-                        <CardDescription>{{ listing.company }}</CardDescription>
-                    </div>
+                    </a>
+                    <CardDescription v-if="hasCompanyWebsiteUrl">
+                        <a
+                            :href="listing.company_website_url"
+                            class="hover:underline"
+                            rel="noreferrer"
+                        >
+                            {{ listing.company }}
+                        </a>
+                    </CardDescription>
+                    <CardDescription v-else>{{
+                        listing.company
+                    }}</CardDescription>
                 </div>
-                <span
-                    @mouseenter="isHovered = true"
-                    @mouseleave="isHovered = false"
-                >
-                    <Icon
-                        v-if="!isHovered"
-                        class="h-6 w-6"
-                        icon="material-symbols:bookmark-outline"
-                    />
-                    <Icon
-                        v-if="isHovered"
-                        class="h-6 w-6"
-                        icon="material-symbols:bookmark"
-                    />
-                </span>
-            </CardHeader>
-            <CardContent> {{ listing.description }}</CardContent>
-            <CardFooter
-                >{{ jobType }} |
-                <span v-if="hasPayRange" class="ml-1">
-                    {{ formattedPayRange }} {{ payType }}</span
-                >
-            </CardFooter>
-        </Card>
-    </a>
+            </div>
+            <span
+                @mouseenter="isHovered = true"
+                @mouseleave="isHovered = false"
+            >
+                <Icon
+                    v-if="!isHovered"
+                    class="h-6 w-6"
+                    icon="material-symbols:bookmark-outline"
+                />
+                <Icon
+                    v-if="isHovered"
+                    class="h-6 w-6"
+                    icon="material-symbols:bookmark"
+                />
+            </span>
+        </CardHeader>
+        <CardContent> {{ listing.description }}</CardContent>
+        <CardFooter
+            >{{ jobType }} |
+            <span v-if="hasPayRange" class="ml-1">
+                {{ formattedPayRange }} {{ payType }}</span
+            >
+        </CardFooter>
+    </Card>
 </template>

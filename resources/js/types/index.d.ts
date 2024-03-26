@@ -13,6 +13,7 @@ export type JobListing = {
     description: string;
     listing_url: string;
     company: string;
+    company_website_url?: string;
     company_logo?: string;
     pay_start?: number;
     pay_end?: number;
@@ -29,6 +30,6 @@ export type PageProps<
     };
     ziggy: Config & { location: string };
     flash?: {
-        message: string
-    }
+        message: string;
+    };
 };

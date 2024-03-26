@@ -21,6 +21,7 @@ final class HomeController
                 'listing_url',
                 'company',
                 'company_logo',
+                'company_website_url',
                 'description',
                 'listing_type',
                 'pay_start',

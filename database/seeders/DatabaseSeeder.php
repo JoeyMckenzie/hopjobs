@@ -25,8 +25,8 @@ final class DatabaseSeeder extends Seeder
             'email' => 'test@example.com',
         ]);
 
-        JobTag::factory(10)->create();
-        JobListing::factory(10)->create();
+        JobTag::factory(20)->create();
+        JobListing::factory(20)->create();
         JobNotificationSubscriber::factory(10)->create();
 
         $tags = JobTag::all();

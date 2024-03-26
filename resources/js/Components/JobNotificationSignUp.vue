@@ -2,19 +2,32 @@
 import { Input } from '@/Components/ui/input';
 import { Button } from '@/Components/ui/button';
 import { route } from 'ziggy-js';
-import { useForm } from '@inertiajs/vue3';
+import { useForm, usePage } from '@inertiajs/vue3';
+import { watch } from 'vue';
+import { toast } from 'vue-sonner';
 
+const page = usePage();
 const form = useForm({
     email: '',
 });
 
 const submit = () => {
     form.post(route('jobs.subscribe'), {
-        onFinish: () => {
+        preserveScroll: true,
+        onSuccess: () => {
             form.reset('email');
         },
     });
 };
+
+watch(page, () => {
+    if (page.props.flash) {
+        toast('You are now subscribed!', {
+            description:
+                'A confirmation email has been sent, unsubscribe from updates anytime.',
+        });
+    }
+});
 </script>
 
 <template>
@@ -49,6 +62,7 @@ const submit = () => {
                     <Button
                         class="mt-3 flex w-full items-center justify-center rounded-md border border-transparent px-5 py-3 text-base font-medium sm:ml-3 sm:mt-0 sm:w-auto sm:flex-shrink-0"
                         type="submit"
+                        :disabled="form.processing"
                     >
                         Notify me
                     </Button>

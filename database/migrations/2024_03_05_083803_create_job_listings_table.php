@@ -9,7 +9,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
+return new class() extends Migration
 {
     /**
      * Run the migrations.
@@ -23,6 +23,7 @@ return new class extends Migration
             $table->text('description');
             $table->text('listing_url');
             $table->text('company');
+            $table->text('company_website_url')->nullable();
             $table->text('company_logo')->nullable();
             $table->integer('pay_start')->nullable();
             $table->integer('pay_end')->nullable();

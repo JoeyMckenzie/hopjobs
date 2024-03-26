@@ -28,6 +28,7 @@ final class JobListingFactory extends Factory
             'description' => fake()->paragraph(),
             'company' => fake()->company(),
             'company_logo' => fake()->imageUrl(),
+            'company_website_url' => fake()->randomElement([null, fake()->url()]),
             'pay_start' => fake()->numberBetween(10, 100),
             'pay_end' => fake()->numberBetween(1000, 10000),
             'status' => fake()->randomElement(ListingStatus::toArray()),
