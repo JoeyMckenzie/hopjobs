@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\JobListingController;
+use App\Http\Controllers\JobNotificationSubscriberController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -15,6 +16,9 @@ Route::get('/dashboard', [JobListingController::class, 'index'])
 
 Route::get('/jobs/{id}', [JobListingController::class, 'show'])
     ->name('jobs.show');
+
+Route::post('/jobs/subscribe', JobNotificationSubscriberController::class)
+    ->name('jobs.subscribe');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

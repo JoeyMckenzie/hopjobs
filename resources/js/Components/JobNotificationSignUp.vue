@@ -1,6 +1,20 @@
 <script lang="ts" setup>
 import { Input } from '@/Components/ui/input';
 import { Button } from '@/Components/ui/button';
+import { route } from 'ziggy-js';
+import { useForm } from '@inertiajs/vue3';
+
+const form = useForm({
+    email: '',
+});
+
+const submit = () => {
+    form.post(route('jobs.subscribe'), {
+        onFinish: () => {
+            form.reset('email');
+        },
+    });
+};
 </script>
 
 <template>
@@ -18,17 +32,18 @@ import { Button } from '@/Components/ui/button';
                 </p>
             </div>
             <div class="mt-12 sm:w-full sm:max-w-md lg:ml-8 lg:mt-0 lg:flex-1">
-                <form class="sm:flex">
+                <form class="sm:flex" @submit.prevent="submit">
                     <label class="sr-only" for="email-address"
                         >Email address</label
                     >
                     <Input
                         id="email-address"
+                        v-model="form.email"
                         autocomplete="email"
                         class="w-full px-5 py-3"
                         name="email-address"
                         placeholder="Enter your email"
-                        required=""
+                        required
                         type="email"
                     />
                     <Button

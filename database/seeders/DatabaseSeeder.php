@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Database\Seeders;
 
 use App\Models\JobListing;
+use App\Models\JobNotificationSubscriber;
 use App\Models\JobTag;
 use App\Models\User;
 use Illuminate\Database\Seeder;
@@ -26,6 +27,7 @@ final class DatabaseSeeder extends Seeder
 
         JobTag::factory(10)->create();
         JobListing::factory(10)->create();
+        JobNotificationSubscriber::factory(10)->create();
 
         $tags = JobTag::all();
         $listings = JobListing::all();
