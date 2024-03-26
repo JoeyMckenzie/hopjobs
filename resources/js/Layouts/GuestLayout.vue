@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import { Link } from '@inertiajs/vue3';
 import { route } from 'ziggy-js';
 import { Icon } from '@iconify/vue';
@@ -6,7 +6,7 @@ import { Icon } from '@iconify/vue';
 
 <template>
     <div
-        class="flex min-h-screen flex-col items-center bg-gray-100 pt-6 sm:justify-center sm:pt-0"
+        class="flex min-h-screen flex-col items-center bg-gray-100 pt-6 justify-center sm:pt-0"
     >
         <div>
             <Link :href="route('home')">

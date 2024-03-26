@@ -9,7 +9,8 @@ import {
 } from '@/Components/ui/card';
 import { JobListing } from '@/types';
 import { Avatar, AvatarFallback, AvatarImage } from '@/Components/ui/avatar';
-import { computed } from 'vue';
+import { computed, ref } from 'vue';
+import { Icon } from '@iconify/vue';
 
 const props = defineProps<{
     listing: JobListing;
@@ -66,27 +67,46 @@ const formattedPayRange = computed(() => {
 });
 
 const hasCompanyLogo = computed(() => !!props.listing.company_logo);
+
+const isHovered = ref(false);
 </script>
 
 <template>
     <a
         :href="listing.listing_url"
-        class="w-full mx-auto max-w-screen-md transition ease-in-out delay-75 hover:scale-[102%]"
+        class="w-full mx-auto max-w-screen-md transition ease-in-out delay-75 hover:scale-[101%]"
     >
         <Card>
-            <CardHeader class="flex-row space-x-2">
-                <Avatar>
-                    <AvatarImage
-                        v-if="hasCompanyLogo"
-                        :alt="listing.company"
-                        :src="listing.company_logo!"
-                    />
-                    <AvatarFallback>Logo</AvatarFallback>
-                </Avatar>
-                <div class="my-auto">
-                    <CardTitle>{{ listing.title }}</CardTitle>
-                    <CardDescription>{{ listing.company }}</CardDescription>
+            <CardHeader class="flex-row justify-between">
+                <div class="flex flex-row space-x-2">
+                    <Avatar>
+                        <AvatarImage
+                            v-if="hasCompanyLogo"
+                            :alt="listing.company"
+                            :src="listing.company_logo!"
+                        />
+                        <AvatarFallback>Logo</AvatarFallback>
+                    </Avatar>
+                    <div class="my-auto">
+                        <CardTitle>{{ listing.title }}</CardTitle>
+                        <CardDescription>{{ listing.company }}</CardDescription>
+                    </div>
                 </div>
+                <span
+                    @mouseenter="isHovered = true"
+                    @mouseleave="isHovered = false"
+                >
+                    <Icon
+                        v-if="!isHovered"
+                        class="h-6 w-6"
+                        icon="material-symbols:bookmark-outline"
+                    />
+                    <Icon
+                        v-if="isHovered"
+                        class="h-6 w-6"
+                        icon="material-symbols:bookmark"
+                    />
+                </span>
             </CardHeader>
             <CardContent> {{ listing.description }}</CardContent>
             <CardFooter

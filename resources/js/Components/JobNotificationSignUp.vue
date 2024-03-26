@@ -6,7 +6,7 @@ import { Button } from '@/Components/ui/button';
 <template>
     <div class="mx-auto max-w-5xl px-6 py-8 lg:px-8">
         <div
-            class="rounded-3xl px-6 py-10 sm:px-12 sm:py-16 lg:flex lg:items-center lg:p-20"
+            class="px-6 py-10 sm:px-12 sm:py-16 lg:flex lg:items-center lg:p-20"
         >
             <div class="lg:w-0 lg:flex-1">
                 <h2 class="text-2xl font-bold tracking-tight">

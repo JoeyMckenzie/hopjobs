@@ -11,8 +11,8 @@ const navigation = {
     ],
     social: [
         {
-            name: 'Facebook',
-            href: '#',
+            name: 'Twitter',
+            href: 'https://x.com/',
             icon: 'pajamas:twitter',
         },
     ],
