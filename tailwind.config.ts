@@ -9,7 +9,7 @@ export default {
         './storage/framework/views/*.php',
         './resources/views/**/*.blade.php',
         './resources/js/**/*.vue',
-        './resources/js/Components/ui/**/*.{ts,vue}',
+        './resources/js/components/ui/**/*.{ts,vue}',
     ],
     darkMode: ['class'],
     safelist: ['dark'],

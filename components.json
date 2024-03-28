@@ -10,7 +10,7 @@
     },
     "framework": "laravel",
     "aliases": {
-        "components": "@/Components",
+        "components": "@/components",
         "utils": "@/shad"
     }
 }

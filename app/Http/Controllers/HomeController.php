@@ -17,6 +17,7 @@ final class HomeController
         $listings = JobListing::openStatus()
             ->limit(5)
             ->get([
+                'id',
                 'title',
                 'listing_url',
                 'company',

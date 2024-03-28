@@ -15,10 +15,10 @@ final class JobNotificationSubscriberController extends Controller
             'email' => 'required|string|lowercase|email|max:255',
         ]);
 
-        JobNotificationSubscriber::create([
+        JobNotificationSubscriber::createOrFirst([
             'email' => $request->email,
         ]);
 
-        session()->flash('message', 'User successfully subscribed.');
+        session()->flash('message', 'subscribed');
     }
 }
