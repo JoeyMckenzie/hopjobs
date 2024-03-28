@@ -10,7 +10,11 @@ const isHovered = ref(false);
 </script>
 
 <template>
-    <span @mouseenter="isHovered = true" @mouseleave="isHovered = false">
+    <span
+        class="cursor-pointer"
+        @mouseenter="isHovered = true"
+        @mouseleave="isHovered = false"
+    >
         <Icon
             v-if="!isHovered"
             class="h-6 w-6"
