@@ -34,7 +34,9 @@ watch(page, () => {
 </script>
 
 <template>
-    <div class="mx-auto max-w-5xl px-6 py-8 lg:px-8">
+    <div
+        class="mx-auto flex justify-center lg:block max-w-5xl px-6 py-8 lg:px-8"
+    >
         <div
             class="px-6 py-10 sm:px-12 sm:py-16 lg:flex lg:items-center lg:p-20"
         >

@@ -8,6 +8,7 @@ import {
 } from '@headlessui/vue';
 import { XMarkIcon } from '@heroicons/vue/24/outline';
 import { Button } from '@/components/ui/button';
+import ApplicationLogo from '@/components/ApplicationLogo.vue';
 
 defineProps<{
     mobileMenuOpen: boolean;
@@ -59,12 +60,12 @@ defineEmits(['mobile-menu-closed']);
                                 >
                                     <div class="px-4 sm:px-6">
                                         <div
-                                            class="flex items-start justify-between"
+                                            class="flex items-center justify-between"
                                         >
                                             <DialogTitle
                                                 class="text-base font-semibold leading-6"
                                             >
-                                                Panel title
+                                                <ApplicationLogo />
                                             </DialogTitle>
                                             <div
                                                 class="ml-3 flex h-7 items-center"
