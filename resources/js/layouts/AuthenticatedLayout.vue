@@ -1,10 +1,7 @@
 <script lang="ts" setup>
-import { ref } from 'vue';
 import ApplicationLogo from '@/components/ApplicationLogo.vue';
 import { Link } from '@inertiajs/vue3';
 import { route } from 'ziggy-js';
-
-const showingNavigationDropdown = ref(false);
 </script>
 
 <template>
