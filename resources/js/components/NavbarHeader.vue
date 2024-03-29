@@ -16,9 +16,8 @@ import {
 } from '@/components/ui/dropdown-menu';
 
 const navigation = [
-    { name: 'Jobs', href: '#' },
+    { name: 'Jobs', href: 'home' },
     { name: 'Breweries', href: '#' },
-    { name: 'Contact', href: '#' },
 ];
 
 const mobileMenuOpen = ref(false);
@@ -46,14 +45,15 @@ const userHasSession = computed(() => !!page.props.auth.user);
                     <Bars3Icon aria-hidden="true" class="h-6 w-6" />
                 </Button>
             </div>
-            <div class="hidden lg:flex lg:gap-x-12">
-                <a
+            <div class="hidden lg:flex lg:gap-x-2">
+                <Button
                     v-for="item in navigation"
                     :key="item.name"
                     :href="item.href"
-                    class="text-sm font-semibold hover:underline leading-6"
-                    >{{ item.name }}</a
-                >
+                    as="a"
+                    variant="ghost"
+                    >{{ item.name }}
+                </Button>
             </div>
             <div class="hidden lg:flex lg:flex-1 lg:justify-end">
                 <!-- Settings Dropdown -->

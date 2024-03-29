@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\JobListingBookmarkController;
 use App\Http\Controllers\JobListingController;
 use App\Http\Controllers\JobNotificationSubscriberController;
 use App\Http\Controllers\ProfileController;
@@ -14,11 +15,12 @@ Route::get('/dashboard', [JobListingController::class, 'index'])
     ->middleware(['auth', 'verified'])
     ->name('dashboard');
 
-Route::get('/jobs/{id}', [JobListingController::class, 'show'])
-    ->name('jobs.show');
-
-Route::post('/jobs/subscribe', JobNotificationSubscriberController::class)
+Route::post('/jobs/{id}/subscribe', JobNotificationSubscriberController::class)
+    ->where('id', '[1-9]+')
     ->name('jobs.subscribe');
+
+Route::post('/jobs/bookmark', JobListingBookmarkController::class)
+    ->name('jobs.bookmark');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

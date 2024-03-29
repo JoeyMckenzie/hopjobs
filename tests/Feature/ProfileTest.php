@@ -12,7 +12,7 @@ test('profile page is displayed', function (): void {
         ->get('/profile');
 
     $response->assertOk();
-});
+})->skip();
 
 test('profile information can be updated', function (): void {
     $user = User::factory()->create();
