@@ -23,7 +23,7 @@ const navigation = [
 const mobileMenuOpen = ref(false);
 const page = usePage();
 
-const userHasSession = computed(() => !!page.props.auth.user);
+const userHasSession = computed(() => !!page.props.auth?.user);
 </script>
 
 <template>
